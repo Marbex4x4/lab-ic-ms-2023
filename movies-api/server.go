@@ -2,8 +2,8 @@ package main
 
 import (
 	"github.com/gofiber/fiber/v2"
-	"github.com/lnds/lab-ic-ms/api/database"
-	"github.com/lnds/lab-ic-ms/api/handlers"
+	"github.com/Marbex4x4/lab-ic-ms-2023/movies-api/database"	
+	"github.com/Marbex4x4/lab-ic-ms-2023/movies-api/handlers"
 )
 
 func server(bind, port string) {
