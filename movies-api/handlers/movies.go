@@ -1,8 +1,8 @@
 package handlers
 
 import (
-	"github.com/Marbex4x4/lab-ic-ms-2023/movies-api/database"
-	"github.com/Marbex4x4/lab-ic-ms-2023/movies-api/models"
+	"github.com/lnds/lab-ic-ms/api/database"
+	"github.com/lnds/lab-ic-ms/api/models"
 
 	"github.com/gofiber/fiber/v2"
 )

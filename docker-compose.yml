@@ -13,6 +13,7 @@ services:
       - POSTGRES_PASSWORD
       - POSTGRES_DB
       - POSTGRES_PORT
+      - POSTGRES_SERVER
     expose:
       - ${BIND_PORT}
     ports:
@@ -28,6 +29,7 @@ services:
       - POSTGRES_PASSWORD
       - POSTGRES_DB
       - POSTGRES_PORT
+      - POSTGRES_SERVER
     expose:
       - ${POSTGRES_PORT}
 
