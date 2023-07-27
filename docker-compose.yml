@@ -11,6 +11,11 @@ services:
       - movies-api
     environment:
       - PORT=${REACT_PORT}
+      - REACT_APP_API_URI=http://localhost:${BIND_PORT}
+    expose:
+      - ${REACT_PORT}
+    ports:
+      - ${REACT_PORT}:${REACT_PORT}
    
   movies-api:
     container_name: movies_api_container
@@ -21,6 +26,11 @@ services:
     environment:
       - BIND_IP
       - BIND_PORT
+      - POSTGRES_USER
+      - POSTGRES_PASSWORD
+      - POSTGRES_DB
+      - POSTGRES_PORT
+      - POSTGRES_SERVER
     expose:
       - ${BIND_PORT}
     ports:
@@ -37,11 +47,12 @@ services:
       - POSTGRES_PASSWORD
       - POSTGRES_DB
       - POSTGRES_PORT
+      - POSTGRES_SERVER
     expose:
       - ${POSTGRES_PORT}
 
   flyway:
-    image: flyway/flyway:latest
+    image: flyway/flyway:7.7.0
     container_name: migration_flyway
     environment:
       - FLYWAY_USER=${POSTGRES_USER}
